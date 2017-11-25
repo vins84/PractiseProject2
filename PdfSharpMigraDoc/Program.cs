@@ -52,7 +52,6 @@ namespace PdfSharpMigraDoc
                 Process.Start(dataTableFilename);
             #endregion
 
-
             #region Old
             //// Create a MigraDoc document
             //Document document = CreateDocument();
