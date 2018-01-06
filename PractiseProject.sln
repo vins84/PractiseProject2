@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfSharpMigraDoc", "PdfShar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayLinq", "ArrayLinq\ArrayLinq.csproj", "{66274EA7-B35E-4AED-8272-8C4BD93709F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZxingQRcode", "ZxingQRcode\ZxingQRcode.csproj", "{BD4612CD-676C-46FF-AC0D-CD9AA8611786}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -181,6 +183,10 @@ Global
 		{66274EA7-B35E-4AED-8272-8C4BD93709F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66274EA7-B35E-4AED-8272-8C4BD93709F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66274EA7-B35E-4AED-8272-8C4BD93709F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

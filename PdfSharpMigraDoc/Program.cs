@@ -3,6 +3,7 @@ using MigraDoc.DocumentObjectModel.Shapes.Charts;
 using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.Rendering;
 using System.Diagnostics;
+using System.IO;
 
 namespace PdfSharpMigraDoc
 {
@@ -13,11 +14,11 @@ namespace PdfSharpMigraDoc
             #region Ticket
             Ticket ticket = new Ticket();
             Document document = ticket.CreateDocument();
-            PdfDocumentRenderer renderer = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
-            renderer.Document = document;
-            renderer.RenderDocument();
+            PdfDocumentRenderer ticketRenderer = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
+            ticketRenderer.Document = document;
+            ticketRenderer.RenderDocument();
             string filename = "TicketTest.pdf";
-            renderer.PdfDocument.Save(filename);
+            ticketRenderer.PdfDocument.Save(filename);
             Process.Start(filename);
             #endregion
 
@@ -28,13 +29,13 @@ namespace PdfSharpMigraDoc
                 ////string ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
                 //MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
 
-                PdfDocumentRenderer rendererLabel = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
-                rendererLabel.Document = labelDoc;
-                rendererLabel.RenderDocument();
+                PdfDocumentRenderer labelRenderer = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
+            labelRenderer.Document = labelDoc;
+            labelRenderer.RenderDocument();
 
                 // Save the document...
                 string labelFilename = "LabelTest.pdf";
-                rendererLabel.PdfDocument.Save(labelFilename);
+            labelRenderer.PdfDocument.Save(labelFilename);
                 // ...and start a viewer.
                 Process.Start(labelFilename);
             #endregion
@@ -90,21 +91,44 @@ namespace PdfSharpMigraDoc
             //// ...and start a viewer.
             //Process.Start(filename);
             #endregion
-            Document testDocument = CreateDocument();
 
             ////string ddl = MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToString(document);
             //MigraDoc.DocumentObjectModel.IO.DdlWriter.WriteToFile(document, "MigraDoc.mdddl");
 
-            PdfDocumentRenderer rendererTest = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
-            rendererLabel.Document = testDocument;
-            rendererLabel.RenderDocument();
 
-            //string testFilename = "LabelTest.pdf";
-            //rendererLabel.PdfDocument.Save(testFilename);
-            //Process.Start(testFilename);
+
+
+            string localURL = @"C:\Users\Miroslaw\Documents\Visual Studio 2015\Projects\PractiseProject(2)\PdfSharpMigraDoc\bin\Debug\LabelTest.pdf";
+            string localURLBrowser = "file:///C:/Users/Miroslaw/Documents/Visual%20Studio%202015/Projects/PractiseProject(2)/PdfSharpMigraDoc/bin/Debug/LabelTest.pdf";
+            //var browserUrl = localURLBrowser.Replace(" ", "%20");
+
+            System.Windows.Controls. WebBrowser webbrowser = new System.Windows.Controls.WebBrowser();
+            webbrowser.Navigate(localURL);
+
+            Process.Start(testFilename);
 
 
         }
+
+
+        public File MyPdfFile()
+        {
+            Document testDocument = CreateDocument();
+
+            PdfDocumentRenderer rendererTest = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
+            rendererTest.Document = testDocument;
+            rendererTest.RenderDocument();
+            string testFilename = "LabelTest22.pdf";
+            //rendererTest.PdfDocument.Save(testFilename);
+            byte[] fileContents = null;
+            using (MemoryStream stream = new MemoryStream())
+            {
+                rendererTest.PdfDocument.Save(stream, false);
+                fileContents = stream.ToArray();
+
+            }
+            return fileContents;
+        } 
 
         public static Document CreateDocument()
         {
@@ -408,14 +432,14 @@ namespace PdfSharpMigraDoc
             row.Height = (Unit.FromMillimeter(8));
             //row.Shading.Color = Colors.PaleGoldenrod;
             Cell cell = row.Cells[0];
-            cell.AddParagraph("Item No: ABC123456");
+            cell.AddParagraph("Item No: EFG00998877");
             row.Format.Alignment = ParagraphAlignment.Center;
             row.Cells[0].VerticalAlignment = VerticalAlignment.Center;
 
             row = table.AddRow();
             row.Height = (Unit.FromMillimeter(8));
             cell = row.Cells[0];
-            cell.AddParagraph("PVO: 987654");
+            cell.AddParagraph("PVO: 53281");
             row.Format.Alignment = ParagraphAlignment.Center;
             row.Cells[0].VerticalAlignment = VerticalAlignment.Center;
 
