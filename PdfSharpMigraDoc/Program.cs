@@ -3,7 +3,6 @@ using MigraDoc.DocumentObjectModel.Shapes.Charts;
 using MigraDoc.DocumentObjectModel.Tables;
 using MigraDoc.Rendering;
 using System.Diagnostics;
-using System.IO;
 
 namespace PdfSharpMigraDoc
 {
@@ -102,33 +101,34 @@ namespace PdfSharpMigraDoc
             string localURLBrowser = "file:///C:/Users/Miroslaw/Documents/Visual%20Studio%202015/Projects/PractiseProject(2)/PdfSharpMigraDoc/bin/Debug/LabelTest.pdf";
             //var browserUrl = localURLBrowser.Replace(" ", "%20");
 
-            System.Windows.Controls. WebBrowser webbrowser = new System.Windows.Controls.WebBrowser();
+            System.Windows.Forms.WebBrowser webbrowser = new System.Windows.Forms.WebBrowser();
             webbrowser.Navigate(localURL);
 
-            Process.Start(testFilename);
+            Process.Start(dataTableFilename);
+
 
 
         }
 
 
-        public File MyPdfFile()
-        {
-            Document testDocument = CreateDocument();
+        //public File MyPdfFile()
+        //{
+        //    Document testDocument = CreateDocument();
 
-            PdfDocumentRenderer rendererTest = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
-            rendererTest.Document = testDocument;
-            rendererTest.RenderDocument();
-            string testFilename = "LabelTest22.pdf";
-            //rendererTest.PdfDocument.Save(testFilename);
-            byte[] fileContents = null;
-            using (MemoryStream stream = new MemoryStream())
-            {
-                rendererTest.PdfDocument.Save(stream, false);
-                fileContents = stream.ToArray();
+        //    PdfDocumentRenderer rendererTest = new PdfDocumentRenderer(true, PdfSharp.Pdf.PdfFontEmbedding.Always);
+        //    rendererTest.Document = testDocument;
+        //    rendererTest.RenderDocument();
+        //    string testFilename = "LabelTest22.pdf";
+        //    //rendererTest.PdfDocument.Save(testFilename);
+        //    byte[] fileContents = null;
+        //    using (MemoryStream stream = new MemoryStream())
+        //    {
+        //        rendererTest.PdfDocument.Save(stream, false);
+        //        fileContents = stream.ToArray();
 
-            }
-            return fileContents;
-        } 
+        //    }
+        //    return fileContents;
+        //} 
 
         public static Document CreateDocument()
         {

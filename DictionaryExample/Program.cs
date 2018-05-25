@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DictionaryExample
 {
@@ -11,6 +8,40 @@ namespace DictionaryExample
     {
         static void Main(string[] args)
         {
+
+            //==============  Initial Dictionary ==========================
+            // This example isnt used anywhere. It is here to show how to instatiate dictianary
+            //Dictionary<string, double> register = new Dictionary<string, double>();
+            //register.Add("PENNY", .01);
+            //register.Add("NICKEL", .05);
+            //register.Add("DIME", .10);
+            //register.Add("QUARTER", 0.25);
+            //register.Add("HHALF DOLLAR", .50);
+            //register.Add("ONE", 1.00);
+            //register.Add("TWO", 2.00);
+            //register.Add("FIVE", 5.00);
+            //register.Add("TEN", 10.00);
+            //register.Add("TWENTY", 20.00);
+            //register.Add("FIFTY", 50.00);
+            //register.Add("ONE HUNDRED", 100.00);
+
+            //var test = new Dictionary<string, double>
+            //        {
+            //            { "PENNY", .01 },
+            //            { "NICKEL", .05},
+            //            { "DIME", .10}
+            //        };
+
+
+            //With C# 6.0, you can create a dictionary in following way:
+            //var dict = new Dictionary<string, int>
+            //{
+            //    ["one"] = 1,
+            //    ["two"] = 2,
+            //    ["three"] = 3
+            //};
+
+
             //==============  Initial List Setup ==========================
             //var primeMinister = new List<PrimeMinister>
             //{

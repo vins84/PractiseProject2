@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayLinq", "ArrayLinq\Arra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZxingQRcode", "ZxingQRcode\ZxingQRcode.csproj", "{BD4612CD-676C-46FF-AC0D-CD9AA8611786}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "String_Palindrome", "String_Palindrome\String_Palindrome.csproj", "{1CF5FA17-C05B-44CF-B298-07F572E7018D}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -187,6 +189,10 @@ Global
 		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD4612CD-676C-46FF-AC0D-CD9AA8611786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF5FA17-C05B-44CF-B298-07F572E7018D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF5FA17-C05B-44CF-B298-07F572E7018D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF5FA17-C05B-44CF-B298-07F572E7018D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF5FA17-C05B-44CF-B298-07F572E7018D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
